@@ -1,0 +1,21 @@
+plugins {
+    id 'java-gradle-plugin'
+    id 'groovy'
+}
+
+group 'ru.ptcore.GradlePythonPlugin'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+gradlePlugin {
+    plugins {
+        GradlePythonPlugin {
+            id = 'ru.ptcore.GradlePythonPlugin'
+            implementationClass = 'ru.ptcore.GradlePythonPlugin'
+        }
+    }
+}
