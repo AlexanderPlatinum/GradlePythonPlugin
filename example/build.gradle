@@ -1,0 +1,25 @@
+buildscript {
+
+    dependencies {
+
+        classpath files("./GradlePythonPlugin-1.0-SNAPSHOT.jar")
+    }
+}
+
+apply plugin: ru.ptcore.GradlePythonPlugin
+
+PythonPlugin {
+
+    pythonVersion = "3.9"
+    executeModule = "main.py"
+
+    tests {
+
+        main {
+            description = "fisrt test"
+            externalName = "main.py"
+        }
+    }
+}
+
+
